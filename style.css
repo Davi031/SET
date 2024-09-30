@@ -1,0 +1,621 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+/* NavBar e hamburger */
+
+.traceContainer {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    padding: 10px;
+    z-index: 1001;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.trace {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.traceContainer.change .trace:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.traceContainer.change .trace:nth-child(2) {
+    opacity: 0;
+}
+
+.traceContainer.change .trace:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 23px;
+    z-index: 1000;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.setLogo {
+    height: 50px;
+    width: 70px;
+    margin-left: 0;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.setLogo img {
+    width: 130%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* SET  */
+
+.containerBackground {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.setColorsBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.TextSetContainer {
+    width: 350px;
+    height: 100vh;
+    z-index: 1;
+}
+
+.textSetImg {
+    width: 400px;
+    height: 180px;
+}
+
+.textSetImg img {
+    width: 100%;
+    height: auto;
+}
+
+/* FRASE */
+
+.phraseCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.phraseCenter h1 {
+    font-size: 70px;
+    color: white;
+    font-weight: 200;
+}
+
+.TextPhraseContainer {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+
+}
+
+/* Planos */
+
+.mainBackground {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.planosCoresBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.planosCoresBack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Planos content */
+
+.planos h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.boxes h1 {
+    font-size: 25px;
+}
+
+.boxes p {
+    color: white;
+    margin: 20px;
+}
+
+.conhecerPlanoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.btnConhecerMais {
+    width: auto;
+    height: 50px;
+    border: 2px solid rgb(192, 140, 252);
+    overflow: hidden;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+
+}
+
+.bronze,
+.ouro,
+.diamante {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, #9e6f3c, #250e01) 1;
+}
+
+.ouro {
+    border-image: linear-gradient(45deg, #f7e044, #2e2301) 1;
+}
+
+.diamante {
+    border-image: linear-gradient(45deg, #00a3e0, #00152b) 1;
+}
+
+.personalite {
+    width: 300px;
+    height: auto;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+/* Sobre nós */
+
+.sobreNosBackground {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    color: white;
+}
+
+.sobreNosFundo {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sobreNosContainer {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #070013 5%, #ff00c1 100%);
+    border-radius: 10px;
+    margin: 25px auto;
+    color: white;
+}
+
+.pontoDePartidaText {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ponto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ponto img {
+    height: 80px;
+    width: auto;
+}
+
+.textInsideContainer {
+    height: 250px;
+    width: 100%;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.btnLerMais {
+    width: 300px;
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    overflow: hidden;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.invisibleParagraphContainr {
+    display: none;
+}
+
+/* O que fazemos */
+
+.oQueFazemosContainer {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    color: white;
+}
+
+.OqueFazemosFundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.OqueFazemosFundo img{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    overflow: hidden;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#prevBtn,
+#nextBtn {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+#prevBtn {
+    margin-left: 10px;
+    transform: scaleX(-1)
+}
+
+#nextBtn {
+    margin-right: 10px;
+}
+
+.carouselItem {
+    display: none;
+}
+
+.carouselItem--visible {
+    display: block;
+}
+
+/* Footer */
+
+.containerFooter {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, #070013 14%, #ff00c1 100%);
+    color: white;
+    position: relative;
+}
+
+.logos {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    filter: invert(100%);
+}
+
+.whatsapp-number,
+.instagram-profile {
+    display: flex;
+    width: 100%;
+    margin-top: -30px;
+}
+
+.logos img {
+    width: 50%;
+    height: auto;
+}
+
+.setFooter {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    margin: 20px;
+    right: 0;
+    bottom: 0;
+}
+
+.setFooter img {
+    width: 70%;
+    height: auto;
+}
+
+/* Efeito aparecer */
+
+.containerBackground,
+.mainBackground {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.containerBackground.hidden,
+.mainBackground.hidden {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .sobreNosContainer {
+        width: 90%;
+    }
+
+    .textInsideContainer {
+        font-size: 18px;
+    }
+
+    /*NavBar - Hamburger*/
+    .traceContainer {
+        visibility: visible;
+        position: fixed;
+    }
+
+    .navBar {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #2f0333;
+        opacity: 0;
+        transition: 0.5s ease, opacity 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .navBar.show {
+        top: 0;
+        opacity: 1;
+    }
+
+    .navBar .row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar .col-auto {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .setLogo {
+        top: 0;
+        left: 70%;
+        margin: 10px;
+        position: absolute;
+    }
+
+
+    /* Set Head*/
+
+    .TextSetContainer {
+        width: auto;
+        height: 30vh;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        margin-left: 13%;
+
+    }
+
+    .textSetImg {
+        width: 250px;
+        height: 150px;
+
+    }
+
+    .textSetImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Frase Head*/
+
+    .TextPhraseContainer {
+        width: 400px;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 1;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .phraseCenter h1 {
+        font-size: 40px;
+        color: white;
+        font-weight: 300;
+        margin: 0;
+        line-height: 1.5;
+        white-space: pre-line;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Planos */
+
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diamante,
+    .personalite {
+        width: 70%;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    /* Sobre nós */
+
+    .textInsideContainer {
+        height: auto;
+        width: 100%;
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+
+    .sobreNosContainer {
+        width: 80%;
+    }
+
+    .sobreNosFundo {
+        position: absolute;
+        top: -130px;
+        left: -50px;
+        width: 100vh;
+        height: 100vh;
+        z-index: -1;
+    }
+    
+    
+    
+    /* O Que Nós Fazemos */
+
+    .oQueFazemosContainer {
+        min-height: auto;
+        margin-top: 25px;
+    }
+
+    .oQueFazemosContainer h1 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: auto;
+        margin: 25px 0;
+    }
+
+    .carouselItem img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer */
+
+    .containerFooter {
+        margin-top: 30px;
+    }
+
+    .logos img {
+        width: 50%;
+        height: auto;
+        margin-left: 25px;
+    }
+}
