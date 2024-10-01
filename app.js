@@ -65,9 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
       
         const invisibleParagraphs = document.querySelectorAll('.invisibleParagraphContainr')
         const textInsideContainer = document.querySelector('.textInsideContainer')
+        const sobreNosBackground = document.querySelector('.sobreNosBackground')
+
 
         invisibleParagraphs.forEach(paragraph => {
             paragraph.style.display = "block"
+            sobreNosBackground.style.height = "auto"
         })
         textInsideContainer.style.height = "auto"
     })

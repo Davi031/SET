@@ -89,15 +89,16 @@ a {
 /* SET  */
 
 .containerBackground {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('svgs/setColorsBack.svg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
+    z-index: -1;
 }
+
 
 .setColorsBack {
     position: absolute;
@@ -109,9 +110,13 @@ a {
 
 
 .TextSetContainer {
-    width: 350px;
+    width: 500px;
     height: 100vh;
     z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .textSetImg {
@@ -126,6 +131,15 @@ a {
 
 /* FRASE */
 
+.TextPhraseContainer {
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 .phraseCenter {
     display: flex;
     justify-content: center;
@@ -138,16 +152,6 @@ a {
     font-size: 70px;
     color: white;
     font-weight: 200;
-}
-
-.TextPhraseContainer {
-    width: 400px;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 1;
-
 }
 
 /* Planos */
@@ -249,14 +253,14 @@ a {
 /* Sobre nós */
 
 .sobreNosBackground {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('svgs/sobreNosFundo.svg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    display: flex;
+    z-index: -1;
     color: white;
 }
 
@@ -334,7 +338,7 @@ a {
     color: white;
 }
 
-.OqueFazemosFundo{
+.OqueFazemosFundo {
     position: absolute;
     top: 0;
     left: 0;
@@ -343,7 +347,7 @@ a {
     z-index: -1;
 }
 
-.OqueFazemosFundo img{
+.OqueFazemosFundo img {
     width: 100%;
     height: 100%;
 }
@@ -499,16 +503,16 @@ a {
 
     /* Set Head*/
 
-    .TextSetContainer {
-        width: auto;
-        height: 30vh;
-        z-index: 1;
+    .containerBackground{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
-        margin-left: 13%;
+    }
 
+    .TextSetContainer {
+        width: 100%;
+        height: 30vh;
     }
 
     .textSetImg {
@@ -525,14 +529,8 @@ a {
     /* Frase Head*/
 
     .TextPhraseContainer {
-        width: 400px;
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        z-index: 1;
-        margin-left: 0;
-        margin-top: 0;
+        width: 100%;
+        height: auto;
     }
 
     .phraseCenter h1 {
@@ -562,6 +560,10 @@ a {
 
     /* Sobre nós */
 
+    .sobreNosBackground{
+        height: auto;
+    }
+
     .textInsideContainer {
         height: auto;
         width: 100%;
@@ -569,21 +571,7 @@ a {
         font-size: 20px;
     }
 
-    .sobreNosContainer {
-        width: 80%;
-    }
 
-    .sobreNosFundo {
-        position: absolute;
-        top: -130px;
-        left: -50px;
-        width: 100vh;
-        height: 100vh;
-        z-index: -1;
-    }
-    
-    
-    
     /* O Que Nós Fazemos */
 
     .oQueFazemosContainer {
